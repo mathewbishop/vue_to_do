@@ -6,7 +6,8 @@ const model = require("../model/list");
 const router = express.Router();
 
 router.post("/api/list", (req, res) => {
-
+    let newListItem = req.body;
+    
 });
 
 router.get("/api/list/not-complete", (req, res) => {
