@@ -1,0 +1,25 @@
+{
+  "name": "vue_to_do",
+  "version": "1.0.0",
+  "description": "A to-do list app built with Vue.js.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mathewbishop/vue_to_do.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mathewbishop/vue_to_do/issues"
+  },
+  "homepage": "https://github.com/mathewbishop/vue_to_do#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "mysql": "^2.16.0"
+  }
+}
