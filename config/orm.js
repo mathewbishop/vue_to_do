@@ -1,5 +1,10 @@
+// Modules
+//=============================================================
 const connection = require("./connection");
 
+//=============================================================
+// ORM object
+//=============================================================
 const orm = {
     selectAll: function(table) {
         let queryString = "SELECT * FROM ??";
