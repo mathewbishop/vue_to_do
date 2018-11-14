@@ -1,6 +1,8 @@
+//=============================================================
 // Modules
 //=============================================================
 const connection = require("./connection");
+
 
 //=============================================================
 // ORM object
@@ -14,14 +16,14 @@ const orm = {
         });
     },
     insertOne: function(column, itemName) {
-        let queryString = "INSERT INTO vue_todo_db (??) VALUES (?)";
+        let queryString = "INSERT INTO items (??) VALUES (?)";
         connection.query(queryString, [column, itemName], (err, result) => {
             if (err) throw err;
             console.log(result);
         });
     },
     updateOne: function(bool, itemName) {
-        let queryString = "UPDATE vue_todo_db SET completed = ? WHERE list_item = ?";
+        let queryString = "UPDATE items SET completed = ? WHERE list_item = ?";
         connection.query(queryString, [bool, itemName], (err, result) => {
             if (err) throw err;
             console.log(result);
