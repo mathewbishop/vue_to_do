@@ -12,16 +12,16 @@ $fontsize-5: 8.543rem;
 // Colors
 //============================================
 $color-dark: #424B54;
-$color-primary: #E1CE7A;
-$color-red: #A63D40;
-$color-green: #8B9556;
-$color-gray: #BEC5AD;
+$color-primary: #547AA5;
+$color-red: #873D48;
+$color-accent: #F26430;
+$color-checkmark: #009DDC;
 
 //============================================
 // Global 
 //============================================
 body {
-    background-color: $color-primary;
+    background-color: rgba($color-primary, .3);
 }
 //============================================
 // Header Grid 
@@ -31,7 +31,8 @@ header {
     grid-template-columns: auto;
     grid-template-rows: 30vh;
     h1 { margin: 2.5rem auto 0 auto; font-size: $fontsize-3; }
-    input { width: 20rem; margin: 0 auto 1rem auto; }
+    input { width: 20rem; margin: 0 auto 1rem auto; height: 1.5rem; border-radius: 2px; }
+    input[type=text] { background-color: rgba($color-primary, .6); font-size: $fontsize-1; }
     button { margin: 0 auto; }
 }
 //============================================
