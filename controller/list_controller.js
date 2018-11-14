@@ -2,12 +2,13 @@
 // Modules
 //=============================================================
 const express = require("express");
-const model = require("../model/list");
+const list = require("../model/list");
 const router = express.Router();
 
 router.post("/api/list", (req, res) => {
-    let newListItem = req.body;
-    
+    let newTodo = req.body;
+    list.insertOne(newTodo);
+    res.json(newTodo);
 });
 
 router.get("/api/list/not-complete", (req, res) => {
