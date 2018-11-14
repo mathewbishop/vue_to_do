@@ -8,9 +8,9 @@ const connection = require("./connection");
 // ORM object
 //=============================================================
 const orm = {
-    selectAll: function(table) {
-        let queryString = "SELECT * FROM ??";
-        connection.query(queryString, [table], (err, result) => {
+    selectAll: function(bool) {
+        let queryString = "SELECT * FROM items WHERE completed = ?";
+        connection.query(queryString, [bool], (err, result) => {
             if (err) throw err;
             console.log(result);
         });

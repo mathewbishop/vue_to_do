@@ -2,8 +2,8 @@ const orm = require("../config/orm");
 
 
 const list = {
-    selectAll: function() {
-        orm.selectAll("items"); 
+    selectAll: function(boolean) {
+        orm.selectAll(boolean); 
     },
     insertOne: function(itemName) {
         orm.insertOne("list_item", itemName);
