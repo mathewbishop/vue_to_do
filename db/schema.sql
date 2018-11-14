@@ -8,5 +8,5 @@ USE vue_todo_db;
 CREATE TABLE items (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     list_item VARCHAR(200) NOT NULL,
-    completed BOOLEAN
+    completed BOOLEAN NOT NULL DEFAULT 0
 );

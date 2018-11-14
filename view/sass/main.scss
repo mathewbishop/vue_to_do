@@ -1,0 +1,58 @@
+//============================================
+// Type Scale
+//============================================
+$fontsize-small: .75rem;
+$fontsize-base: 1.125rem;
+$fontsize-1: 1.688rem;
+$fontsize-2: 2.531rem;
+$fontsize-3: 3.797rem;
+$fontsize-4: 5.695rem;
+$fontsize-5: 8.543rem;
+//============================================
+// Colors
+//============================================
+$color-dark: #424B54;
+$color-primary: #547AA5;
+$color-red: #873D48;
+$color-accent: #F26430;
+$color-checkmark: #009DDC;
+
+//============================================
+// Global 
+//============================================
+body {
+    background-color: rgba($color-primary, .3);
+}
+//============================================
+// Header Grid 
+//============================================
+header {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 30vh;
+    h1 { margin: 2.5rem auto 0 auto; font-size: $fontsize-3; }
+    input { width: 20rem; margin: 0 auto 1rem auto; height: 1.5rem; border-radius: 2px; }
+    input[type=text] { background-color: rgba($color-primary, .6); font-size: $fontsize-1; }
+    button { margin: 0 auto; }
+}
+//============================================
+// Main Grid
+//============================================
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    .not-complete {
+        padding: 1rem;
+        margin: 1rem 0 1rem 1rem;
+    }
+    .complete {
+        padding: 1rem;
+        margin: 1rem 0 1rem 1rem;
+    }
+}
+
+
+//============================================
+// Import partials
+//============================================
+@import "_modules";

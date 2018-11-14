@@ -1,0 +1,56 @@
+body {
+  background-color: rgba(84, 122, 165, 0.3); }
+
+header {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 30vh; }
+  header h1 {
+    margin: 2.5rem auto 0 auto;
+    font-size: 3.797rem; }
+  header input {
+    width: 20rem;
+    margin: 0 auto 1rem auto;
+    height: 1.5rem;
+    border-radius: 2px; }
+  header input[type=text] {
+    background-color: rgba(84, 122, 165, 0.6);
+    font-size: 1.688rem; }
+  header button {
+    margin: 0 auto; }
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr; }
+  main .not-complete {
+    padding: 1rem;
+    margin: 1rem 0 1rem 1rem; }
+  main .complete {
+    padding: 1rem;
+    margin: 1rem 0 1rem 1rem; }
+
+.btn {
+  width: auto;
+  font-size: 1.688rem;
+  background-color: #F26430;
+  min-height: 3rem;
+  border-radius: 2px;
+  box-shadow: 2px 2px 1px black; }
+
+.btn-checkmark {
+  width: auto;
+  font-size: 1.688rem;
+  background-color: #009DDC;
+  min-height: 3rem;
+  border-radius: 2px;
+  box-shadow: 2px 2px 1px black; }
+
+.btn-cancel {
+  width: auto;
+  font-size: 1.688rem;
+  background-color: #873D48;
+  min-height: 3rem;
+  border-radius: 2px;
+  box-shadow: 2px 2px 1px black; }
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,24 @@
+.btn {
+    width: auto;
+    font-size: $fontsize-1;
+    background-color: $color-accent;
+    min-height: 3rem;
+    border-radius: 2px;
+    box-shadow: 2px 2px 1px black;
+}
+.btn-checkmark {
+    width: auto;
+    font-size: $fontsize-1;
+    background-color: $color-checkmark;
+    min-height: 3rem;
+    border-radius: 2px;
+    box-shadow: 2px 2px 1px black;
+}
+.btn-cancel {
+    width: auto;
+    font-size: $fontsize-1;
+    background-color: $color-red;
+    min-height: 3rem;
+    border-radius: 2px;
+    box-shadow: 2px 2px 1px black;
+}
