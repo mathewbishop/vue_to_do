@@ -1,6 +1,3 @@
-body {
-  background-color: rgba(84, 122, 165, 0.3); }
-
 header {
   display: grid;
   grid-template-columns: auto;
@@ -14,7 +11,7 @@ header {
     height: 1.5rem;
     border-radius: 2px; }
   header input[type=text] {
-    background-color: rgba(84, 122, 165, 0.6);
+    background-color: rgba(247, 92, 3, 0.6);
     font-size: 1.688rem; }
   header button {
     margin: 0 auto; }
@@ -22,6 +19,9 @@ header {
 main {
   display: grid;
   grid-template-columns: 1fr 1fr; }
+  main h1 {
+    margin: 1rem 0;
+    text-align: center; }
   main .not-complete {
     padding: 1rem;
     margin: 1rem 0 1rem 1rem; }
@@ -32,25 +32,25 @@ main {
 .btn {
   width: auto;
   font-size: 1.688rem;
-  background-color: #F26430;
+  background-color: #F75C03;
   min-height: 3rem;
-  border-radius: 2px;
+  border-radius: 10%;
   box-shadow: 2px 2px 1px black; }
 
 .btn-checkmark {
   width: auto;
   font-size: 1.688rem;
-  background-color: #009DDC;
+  background-color: #04A777;
   min-height: 3rem;
-  border-radius: 2px;
+  border-radius: 50%;
   box-shadow: 2px 2px 1px black; }
 
 .btn-cancel {
   width: auto;
   font-size: 1.688rem;
-  background-color: #873D48;
+  background-color: #ED254E;
   min-height: 3rem;
-  border-radius: 2px;
+  border-radius: 50%;
   box-shadow: 2px 2px 1px black; }
 
 /*# sourceMappingURL=styles.css.map */
