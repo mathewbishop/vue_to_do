@@ -12,21 +12,21 @@ const orm = {
         let queryString = "SELECT * FROM items WHERE completed = ?";
         connection.query(queryString, [bool], (err, result) => {
             if (err) throw err;
-            cb(result)
+            cb(result);
         });
     },
-    insertOne: function(column, itemName) {
+    insertOne: function(column, itemName, cb) {
         let queryString = "INSERT INTO items (??) VALUES (?)";
         connection.query(queryString, [column, itemName], (err, result) => {
             if (err) throw err;
-            console.log(result);
+            cb(result);
         });
     },
-    updateOne: function(bool, itemName) {
+    updateOne: function(bool, itemName, cb) {
         let queryString = "UPDATE items SET completed = ? WHERE list_item = ?";
         connection.query(queryString, [bool, itemName], (err, result) => {
             if (err) throw err;
-            console.log(result);
+            cb(result);
         });
     },
     end: function() {

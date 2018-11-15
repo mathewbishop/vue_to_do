@@ -22,10 +22,16 @@
 
             <section class="not-complete">
                 <h1>Todo</h1>
+                <ul v-for="item in notComp">
+                    <li>{{ item }}</li>
+                </ul>
             </section>
 
             <section class="complete">
                 <h1>Completed</h1>
+                <ul v-for="item in complete">
+                    <li>{{ item }}</li>
+                </ul>
             </section>
 
         </main>
