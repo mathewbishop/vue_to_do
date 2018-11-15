@@ -11,20 +11,19 @@ $fontsize-5: 8.543rem;
 //============================================
 // Colors
 //============================================
-$color-dark: #424B54;
-$color-primary: #547AA5;
-$color-red: #873D48;
-$color-accent: #F26430;
-$color-checkmark: #009DDC;
+$color-dark: #291720;
+$color-primary: #F75C03;
+$color-neutral: #9B9B9B;
+$color-yes: #04A777;
+$color-no: #ED254E;
+
 
 //============================================
 // Global 
 //============================================
-body {
-    background-color: rgba($color-primary, .3);
-}
+
 //============================================
-// Header Grid 
+// Header 
 //============================================
 header {
     display: grid;
@@ -36,11 +35,12 @@ header {
     button { margin: 0 auto; }
 }
 //============================================
-// Main Grid
+// Main 
 //============================================
 main {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    h1 { margin: 1rem 0; text-align: center; }
     .not-complete {
         padding: 1rem;
         margin: 1rem 0 1rem 1rem;

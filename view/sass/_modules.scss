@@ -1,24 +1,24 @@
 .btn {
     width: auto;
     font-size: $fontsize-1;
-    background-color: $color-accent;
+    background-color: $color-primary;
     min-height: 3rem;
-    border-radius: 2px;
+    border-radius: 10%;
     box-shadow: 2px 2px 1px black;
 }
 .btn-checkmark {
     width: auto;
     font-size: $fontsize-1;
-    background-color: $color-checkmark;
+    background-color: $color-yes;
     min-height: 3rem;
-    border-radius: 2px;
+    border-radius: 50%;
     box-shadow: 2px 2px 1px black;
 }
 .btn-cancel {
     width: auto;
     font-size: $fontsize-1;
-    background-color: $color-red;
+    background-color: $color-no;
     min-height: 3rem;
-    border-radius: 2px;
+    border-radius: 50%;
     box-shadow: 2px 2px 1px black;
 }
