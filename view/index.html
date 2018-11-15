@@ -29,25 +29,19 @@
                     <li>{{ item }}</li><i class="fas fa-check-square"></i>
                 </ul>
             </section> -->
-            <section class="not-complete">
-                    <div class="level has-background-success">
-                        <div class="level-left">
-                            <div class="level-item">
-                                <p class="has-background-success is-6">Milk</p>
-                            </div>
-                        </div>
-                        <div class="level-right">
-                            <div class="level-item">
-                                <i class="fas fa-check-circle fa-2x"></i>
-                                <i class="fas fa-trash fa-2x"></i>
-                            </div>
-                        </div>
-                    </div>
+            <section class="not-complete">            
+                  <!-- <i class="fas fa-trash fa-2x"></i> -->
+                    <ul>
+                        <li><i class="fas fa-check-circle fa-2x"></i>Milk</li>
+                    </ul>
             </section>
 
             <section class="complete">
-                <ul v-for="item in complete">
+                <!-- <ul v-for="item in complete">
                     <li>{{ item }}</li>
+                </ul> -->
+                <ul>
+                    <li>Milk<i class="fas fa-trash fa-2x"></i></li>
                 </ul>
             </section>
 
