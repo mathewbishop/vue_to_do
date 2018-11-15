@@ -9,45 +9,34 @@ $fontsize-3: 3.797rem;
 $fontsize-4: 5.695rem;
 $fontsize-5: 8.543rem;
 //============================================
-// Colors
+// Global
 //============================================
-$color-dark: #291720;
-$color-primary: #F75C03;
-$color-neutral: #9B9B9B;
-$color-yes: #04A777;
-$color-no: #ED254E;
-
-
-//============================================
-// Global 
-//============================================
-
+.columns {
+    text-align: center;
+}
 //============================================
 // Header 
 //============================================
 header {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 30vh;
-    h1 { margin: 2.5rem auto 0 auto; font-size: $fontsize-3; }
-    input { width: 20rem; margin: 0 auto 1rem auto; height: 1.5rem; border-radius: 2px; }
-    input[type=text] { background-color: rgba($color-primary, .6); font-size: $fontsize-1; }
-    button { margin: 0 auto; }
+    h1 { font-size: $fontsize-3; margin: 2rem 0; }
+    .input { margin: 1rem auto; max-width: 400px; display: block; }
+
 }
 //============================================
 // Main 
 //============================================
 main {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    h1 { margin: 1rem 0; text-align: center; }
     .not-complete {
-        padding: 1rem;
-        margin: 1rem 0 1rem 1rem;
-    }
-    .complete {
-        padding: 1rem;
-        margin: 1rem 0 1rem 1rem;
+        text-align: left;
+        .level {
+            border-radius: 6px; 
+            width: 50%;
+            margin: 0 auto; 
+            p { font-size: $fontsize-1; margin-left: 2rem; }
+            .fas { margin: 0 .5rem; padding: 1rem 0; cursor: pointer; }
+            .fa-trash { padding-right: .5rem; }
+        }
+        
     }
 }
 

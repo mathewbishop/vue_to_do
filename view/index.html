@@ -5,36 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/bulmaswatch/flatly/bulmaswatch.min.css">
     <link rel="stylesheet" href="./css/styles.css">
     <title>Vue To-Do</title>
 </head>
 <body>
     
-    <div id="app">
+    <div id="app" class="columns is-centered">
 
-        <header>
+        <div class="column is-full container">
+
+        <header class="section">
             <h1>Vue To Do</h1>
-            <input type="text">
-            <button class="btn" type="submit">Add Item</button>
+            <input class="input" type="text">
+            <button class="button is-primary is-large is-rounded" type="submit">Add Item</button>
         </header>
 
         <main>
 
-            <section class="not-complete">
+            <!-- <section class="not-complete">
                 <h1>Todo</h1>
                 <ul v-for="item in notComp">
-                    <li>{{ item }}</li>
+                    <li>{{ item }}</li><i class="fas fa-check-square"></i>
                 </ul>
+            </section> -->
+            <section class="not-complete">
+                    <div class="level has-background-success">
+                        <div class="level-left">
+                            <div class="level-item">
+                                <p class="has-background-success is-6">Milk</p>
+                            </div>
+                        </div>
+                        <div class="level-right">
+                            <div class="level-item">
+                                <i class="fas fa-check-circle fa-2x"></i>
+                                <i class="fas fa-trash fa-2x"></i>
+                            </div>
+                        </div>
+                    </div>
             </section>
 
             <section class="complete">
-                <h1>Completed</h1>
                 <ul v-for="item in complete">
                     <li>{{ item }}</li>
                 </ul>
             </section>
 
         </main>
+
+        </div>
 
     </div>
  
