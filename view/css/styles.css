@@ -11,12 +11,18 @@ header .input {
 
 main .not-complete {
   text-align: left; }
-  main .not-complete li {
-    max-width: 400px;
-    margin: .5rem auto;
-    padding-left: 2rem;
-    border-radius: 6px; }
-    main .not-complete li .list-actions {
-      display: inline; }
+  main .not-complete .level {
+    border-radius: 6px;
+    width: 50%;
+    margin: 0 auto; }
+    main .not-complete .level p {
+      font-size: 1.688rem;
+      margin-left: 2rem; }
+    main .not-complete .level .fas {
+      margin: 0 .5rem;
+      padding: 1rem 0;
+      cursor: pointer; }
+    main .not-complete .level .fa-trash {
+      padding-right: .5rem; }
 
 /*# sourceMappingURL=styles.css.map */

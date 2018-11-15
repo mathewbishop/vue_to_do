@@ -28,13 +28,15 @@ header {
 main {
     .not-complete {
         text-align: left;
-        li { 
-            max-width: 400px; 
-            margin: .5rem auto; 
-            padding-left: 2rem; 
+        .level {
             border-radius: 6px; 
-            .list-actions { display: inline; }
+            width: 50%;
+            margin: 0 auto; 
+            p { font-size: $fontsize-1; margin-left: 2rem; }
+            .fas { margin: 0 .5rem; padding: 1rem 0; cursor: pointer; }
+            .fa-trash { padding-right: .5rem; }
         }
+        
     }
 }
 
