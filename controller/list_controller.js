@@ -12,8 +12,9 @@ router.post("/api/add-item", (req, res) => {
 });
 
 router.get("/api/list/not-complete", (req, res) => {
-    let notComplete = list.selectAll(0);
-    res.json(notComplete);
+        list.selectAll(0, function(data) {
+            res.json(data);
+        })
 });
 
 router.get("api/list/complete", (req, res) => {

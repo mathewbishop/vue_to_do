@@ -8,11 +8,11 @@ const connection = require("./connection");
 // ORM object
 //=============================================================
 const orm = {
-    selectAll: function(bool) {
+    selectAll: function(bool, cb) {
         let queryString = "SELECT * FROM items WHERE completed = ?";
         connection.query(queryString, [bool], (err, result) => {
             if (err) throw err;
-            console.log(result);
+            cb(result)
         });
     },
     insertOne: function(column, itemName) {
