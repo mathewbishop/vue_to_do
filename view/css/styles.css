@@ -20,8 +20,18 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr; }
   main h1 {
-    margin: 1rem 0;
-    text-align: center; }
+    margin: 1rem 0 3rem 0;
+    text-align: center;
+    font-size: 2.531rem; }
+  main ul {
+    list-style-type: none;
+    padding: 0; }
+  main li {
+    text-align: center;
+    font-size: 1.688rem;
+    margin: 1rem 0; }
+  main .fas {
+    margin-left: 1rem; }
   main .not-complete {
     padding: 1rem;
     margin: 1rem 0 1rem 1rem; }
@@ -35,7 +45,8 @@ main {
   background-color: #F75C03;
   min-height: 3rem;
   border-radius: 10%;
-  box-shadow: 2px 2px 1px black; }
+  box-shadow: 2px 2px 1px black;
+  cursor: pointer; }
 
 .btn-checkmark {
   width: auto;
@@ -43,7 +54,8 @@ main {
   background-color: #04A777;
   min-height: 3rem;
   border-radius: 50%;
-  box-shadow: 2px 2px 1px black; }
+  box-shadow: 2px 2px 1px black;
+  cursor: pointer; }
 
 .btn-cancel {
   width: auto;
@@ -51,6 +63,7 @@ main {
   background-color: #ED254E;
   min-height: 3rem;
   border-radius: 50%;
-  box-shadow: 2px 2px 1px black; }
+  box-shadow: 2px 2px 1px black;
+  cursor: pointer; }
 
 /*# sourceMappingURL=styles.css.map */

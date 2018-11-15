@@ -40,7 +40,10 @@ header {
 main {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    h1 { margin: 1rem 0; text-align: center; }
+    h1 { margin: 1rem 0 3rem 0; text-align: center; font-size: $fontsize-2; }
+    ul { list-style-type: none; padding: 0; }
+    li { text-align: center; font-size: $fontsize-1; margin: 1rem 0; }
+    .fas { margin-left: 1rem; }
     .not-complete {
         padding: 1rem;
         margin: 1rem 0 1rem 1rem;
