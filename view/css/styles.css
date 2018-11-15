@@ -1,69 +1,22 @@
-header {
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: 30vh; }
-  header h1 {
-    margin: 2.5rem auto 0 auto;
-    font-size: 3.797rem; }
-  header input {
-    width: 20rem;
-    margin: 0 auto 1rem auto;
-    height: 1.5rem;
-    border-radius: 2px; }
-  header input[type=text] {
-    background-color: rgba(247, 92, 3, 0.6);
-    font-size: 1.688rem; }
-  header button {
-    margin: 0 auto; }
+.columns {
+  text-align: center; }
 
-main {
-  display: grid;
-  grid-template-columns: 1fr 1fr; }
-  main h1 {
-    margin: 1rem 0 3rem 0;
-    text-align: center;
-    font-size: 2.531rem; }
-  main ul {
-    list-style-type: none;
-    padding: 0; }
-  main li {
-    text-align: center;
-    font-size: 1.688rem;
-    margin: 1rem 0; }
-  main .fas {
-    margin-left: 1rem; }
-  main .not-complete {
-    padding: 1rem;
-    margin: 1rem 0 1rem 1rem; }
-  main .complete {
-    padding: 1rem;
-    margin: 1rem 0 1rem 1rem; }
+header h1 {
+  font-size: 3.797rem;
+  margin: 2rem 0; }
+header .input {
+  margin: 1rem auto;
+  max-width: 400px;
+  display: block; }
 
-.btn {
-  width: auto;
-  font-size: 1.688rem;
-  background-color: #F75C03;
-  min-height: 3rem;
-  border-radius: 10%;
-  box-shadow: 2px 2px 1px black;
-  cursor: pointer; }
-
-.btn-checkmark {
-  width: auto;
-  font-size: 1.688rem;
-  background-color: #04A777;
-  min-height: 3rem;
-  border-radius: 50%;
-  box-shadow: 2px 2px 1px black;
-  cursor: pointer; }
-
-.btn-cancel {
-  width: auto;
-  font-size: 1.688rem;
-  background-color: #ED254E;
-  min-height: 3rem;
-  border-radius: 50%;
-  box-shadow: 2px 2px 1px black;
-  cursor: pointer; }
+main .not-complete {
+  text-align: left; }
+  main .not-complete li {
+    max-width: 400px;
+    margin: .5rem auto;
+    padding-left: 2rem;
+    border-radius: 6px; }
+    main .not-complete li .list-actions {
+      display: inline; }
 
 /*# sourceMappingURL=styles.css.map */
