@@ -11,10 +11,6 @@ const vm = new Vue({
             .then(res => res.json())
             .then(data => {
                 self.notComp = data
-                // data.forEach(item => {
-                //     let listItem = item.list_item;
-                //     self.notComp.push(listItem);
-                // });
             });
         },
         fetchComplete: function() {
@@ -22,10 +18,7 @@ const vm = new Vue({
             fetch("/api/list/complete")
             .then(res => res.json())
             .then(data => {
-                data.forEach(item => {
-                    let listItem = item.list_item;
-                    self.complete.push(listItem);
-                });
+                self.complete = data
             });
         },
         markComplete: function(content) {
@@ -44,5 +37,6 @@ const vm = new Vue({
     }
 })
 
+// On page load, get initial list item data and state
 vm.fetchNotComp();
 vm.fetchComplete();
