@@ -6,14 +6,15 @@ const vm = new Vue({
     },
     methods: {
         fetchNotComp: function() {
-            let self = this;
+            let self = this
             fetch("/api/list/not-complete")
             .then(res => res.json())
             .then(data => {
-                data.forEach(item => {
-                    let listItem = item.list_item;
-                    self.notComp.push(listItem);
-                });
+                self.notComp = data
+                // data.forEach(item => {
+                //     let listItem = item.list_item;
+                //     self.notComp.push(listItem);
+                // });
             });
         },
         fetchComplete: function() {
@@ -26,8 +27,16 @@ const vm = new Vue({
                     self.complete.push(listItem);
                 });
             });
+        },
+        markComplete: function(content) {
+            fetch("/api/list/item-update", {
+                method: "PUT",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(content)
+            })
         }
     }
 })
 
 vm.fetchNotComp();
+vm.fetchComplete();

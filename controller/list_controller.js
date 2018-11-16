@@ -14,6 +14,14 @@ router.post("/api/add-item", (req, res) => {
 //     res.end();
 });
 
+router.put("/api/list/item-update", (req, res) => {
+    list.updateOne(1, req.body.list_item, function(data) {
+        console.log(data);
+    })
+    console.log(req.body);
+    res.sendStatus(201);
+})
+
 router.get("/api/list/not-complete", (req, res) => {
     list.selectAll(0, function(data) {
         res.json(data);

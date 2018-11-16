@@ -9,20 +9,36 @@ header .input {
   max-width: 400px;
   display: block; }
 
-main .not-complete {
-  text-align: left; }
-  main .not-complete .level {
-    border-radius: 6px;
-    width: 50%;
-    margin: 0 auto; }
-    main .not-complete .level p {
+main .not-complete li {
+  display: block;
+  text-align: left;
+  font-size: 1.688rem;
+  border: 2px solid #2ecc71;
+  border-radius: .4em;
+  max-width: 50rem;
+  margin: 0 auto;
+  padding: .5rem; }
+  main .not-complete li i {
+    font-size: 1.688rem;
+    margin-right: 1rem; }
+main .complete {
+  margin: 2rem 0; }
+  main .complete li {
+    text-decoration: line-through;
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    font-size: 1.688rem;
+    border: 2px solid #a9afb7;
+    background-color: rgba(181, 187, 196, 0.3);
+    border-radius: .4em;
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: .5rem; }
+    main .complete li i {
       font-size: 1.688rem;
-      margin-left: 2rem; }
-    main .not-complete .level .fas {
-      margin: 0 .5rem;
-      padding: 1rem 0;
-      cursor: pointer; }
-    main .not-complete .level .fa-trash {
-      padding-right: .5rem; }
+      margin-right: 1rem; }
+    main .complete li p {
+      margin-left: 1rem; }
 
 /*# sourceMappingURL=styles.css.map */
