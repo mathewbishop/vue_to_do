@@ -22,7 +22,16 @@ const vm = new Vue({
             });
         },
         addItem: function() {
-
+            let newItem = {
+                list_item: document.getElementById("li-input").value
+            }
+            fetch("/api/add-item", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(newItem)
+            })
+            .then(this.fetchNotComp)
+            .then(this.fetchComplete)
         },
         markComplete: function(content) {
             fetch("/api/list/item-update", {
@@ -35,6 +44,9 @@ const vm = new Vue({
         },
         deleteItem: function(content) {
             
+        },
+        clearInput: function(formId) {
+            document.getElementById("li-form").reset();
         },
         empty: function() {
             this.notComp = [];
