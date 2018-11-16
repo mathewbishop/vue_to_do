@@ -21,6 +21,9 @@ const vm = new Vue({
                 self.complete = data
             });
         },
+        addItem: function() {
+
+        },
         markComplete: function(content) {
             fetch("/api/list/item-update", {
                 method: "PUT",
@@ -29,6 +32,9 @@ const vm = new Vue({
             })
             .then(this.fetchComplete())
             .then(this.fetchNotComp())
+        },
+        deleteItem: function(content) {
+            
         },
         empty: function() {
             this.notComp = [];
