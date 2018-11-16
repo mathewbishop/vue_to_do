@@ -10,10 +10,11 @@ const vm = new Vue({
             fetch("/api/list/not-complete")
             .then(res => res.json())
             .then(data => {
-                data.forEach(item => {
-                    let listItem = item.list_item;
-                    self.notComp.push(listItem);
-                });
+                self.notComp = data
+                // data.forEach(item => {
+                //     let listItem = item.list_item;
+                //     self.notComp.push(listItem);
+                // });
             });
         },
         fetchComplete: function() {
@@ -31,10 +32,8 @@ const vm = new Vue({
             fetch("/api/list/item-update", {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },
-                body: content
+                body: JSON.stringify(content)
             })
-            console.log(content);
-            
         }
     }
 })
