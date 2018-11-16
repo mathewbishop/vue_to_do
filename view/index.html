@@ -25,7 +25,7 @@
 
             <section class="not-complete">
                 <ul v-for="item in notComp">
-                    <li><i @click="markComplete(item)" class="fas fa-check-square"></i>{{ item.list_item }}</li>
+                    <li><i @click="empty(); markComplete(item)" class="fas fa-check-square"></i>{{ item.list_item }}</li>
                 </ul>
             </section>
             <!-- <section class="not-complete">            

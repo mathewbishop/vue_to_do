@@ -34,6 +34,12 @@ const vm = new Vue({
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(content)
             })
+            .then(this.fetchComplete())
+            .then(this.fetchNotComp())
+        },
+        empty: function() {
+            this.notComp = [];
+            this.complete = [];
         }
     }
 })

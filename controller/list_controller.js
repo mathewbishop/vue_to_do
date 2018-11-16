@@ -18,7 +18,6 @@ router.put("/api/list/item-update", (req, res) => {
     list.updateOne(1, req.body.list_item, function(data) {
         console.log(data);
     })
-    console.log(req.body);
     res.sendStatus(201);
 })
 
