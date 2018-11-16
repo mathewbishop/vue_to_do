@@ -6,7 +6,7 @@ const vm = new Vue({
     },
     methods: {
         fetchNotComp: function() {
-            let self = this;
+            let self = this
             fetch("/api/list/not-complete")
             .then(res => res.json())
             .then(data => {
@@ -26,8 +26,18 @@ const vm = new Vue({
                     self.complete.push(listItem);
                 });
             });
+        },
+        markComplete: function(content) {
+            fetch("/api/list/item-update", {
+                method: "PUT",
+                headers: { "Content-Type": "application/json" },
+                body: content
+            })
+            console.log(content);
+            
         }
     }
 })
 
 vm.fetchNotComp();
+vm.fetchComplete();

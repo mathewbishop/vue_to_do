@@ -23,25 +23,28 @@
 
         <main>
 
-            <!-- <section class="not-complete">
-                <h1>Todo</h1>
+            <section class="not-complete">
                 <ul v-for="item in notComp">
-                    <li>{{ item }}</li><i class="fas fa-check-square"></i>
+                    <li><i @click="markComplete(item)" class="fas fa-check-square"></i>{{ item }}</li>
                 </ul>
-            </section> -->
-            <section class="not-complete">            
-                  <!-- <i class="fas fa-trash fa-2x"></i> -->
+            </section>
+            <!-- <section class="not-complete">            
                     <ul>
                         <li><i class="fas fa-check-circle fa-2x"></i>Milk</li>
                     </ul>
-            </section>
+            </section> -->
 
             <section class="complete">
-                <!-- <ul v-for="item in complete">
-                    <li>{{ item }}</li>
-                </ul> -->
-                <ul>
-                    <li>Milk<i class="fas fa-trash fa-2x"></i></li>
+                <ul v-for="item in complete">
+                    <li>
+                        <span class="left">
+                            <p>{{ item }}</p>
+                        </span>
+                        <span class="right">
+                            <i class="fas fa-trash fa-2x"></i>
+                        </span>
+                    </li>
+                    
                 </ul>
             </section>
 
