@@ -8,6 +8,8 @@ const router = express.Router();
 //=============================================================
 // Routes
 //=============================================================
+
+// Post route for add list item
 router.post("/api/todolist", (req, res) => {
 // console.log(req.body.list_item);
     let newItem = req.body.list_item
@@ -23,6 +25,7 @@ router.post("/api/todolist", (req, res) => {
       
 });
 
+// Put route for update list item status (complete/not-complete)
 router.put("/api/todolist/:id", (req, res) => {
     list.updateOne(1, req.body.list_item, function(data) {
         console.log(data);
@@ -31,6 +34,7 @@ router.put("/api/todolist/:id", (req, res) => {
     
 })
 
+// Delete route for removing completed items
 router.delete("/api/todolist/:id", (req, res) => {
     let item = req.params.id;
     list.deleteOne(item, function(data) {
@@ -40,6 +44,7 @@ router.delete("/api/todolist/:id", (req, res) => {
     res.end()
 })
 
+// Get route to get data for all items
 router.get("/api/todolist", (req, res) => {
     list.selectAll(function(data) {
         res.json(data);

@@ -28,7 +28,7 @@
 
             <section class="not-complete">
                 <ul v-for="item in notComp">
-                    <li><i @click="empty(); markComplete(item)" class="fas fa-check-square"></i>{{ item.list_item }}</li>
+                    <li><i @click="markComplete(item)" class="fas fa-check-square"></i>{{ item.list_item }}</li>
                 </ul>
             </section>
             <!-- <section class="not-complete">            
@@ -44,7 +44,7 @@
                             <p>{{ item.list_item }}</p>
                         </span>
                         <span class="right">
-                            <i @click="empty(); deleteItem(item.list_item);" class="fas fa-trash fa-2x"></i>
+                            <i @click="deleteItem(item.list_item);" class="fas fa-trash fa-2x"></i>
                         </span>
                     </li>
                     

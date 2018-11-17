@@ -32,18 +32,20 @@ const vm = new Vue({
             })
             .then(response => response.json())
             .then(data => {
-                self.notComp = data;
+                self.notComp.push(data);
             })
             document.getElementById("li-form").reset();
         },
         markComplete: function(id) {
+            let self = this
             fetch("/api/todolist/:id", {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(id)
             })
             .then(res => {
-                console.log(res)
+                self.notComp.pop(id)
+                self.complete.push(id)
             })
         },
         deleteItem: function(id) {
