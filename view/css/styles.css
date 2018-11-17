@@ -16,7 +16,7 @@ main .not-complete li {
   border: 2px solid #2ecc71;
   border-radius: .4em;
   max-width: 50rem;
-  margin: 0 auto;
+  margin: 1rem auto;
   padding: .5rem; }
   main .not-complete li i {
     font-size: 1.688rem;
@@ -33,7 +33,7 @@ main .complete {
     background-color: rgba(181, 187, 196, 0.3);
     border-radius: .4em;
     max-width: 50rem;
-    margin: 0 auto;
+    margin: 1rem auto;
     padding: .5rem; }
     main .complete li i {
       font-size: 1.688rem;

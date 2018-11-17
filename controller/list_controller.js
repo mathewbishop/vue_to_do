@@ -11,7 +11,6 @@ const router = express.Router();
 
 // Post route for add list item
 router.post("/api/todolist", (req, res) => {
-// console.log(req.body.list_item);
     let newItem = req.body.list_item
     if (newItem === "") {
         res.sendStatus(400);
@@ -40,7 +39,6 @@ router.delete("/api/todolist/:id", (req, res) => {
     list.deleteOne(item, function(data) {
         console.log(data);
     })
-    // console.log(item);
     res.end()
 })
 
