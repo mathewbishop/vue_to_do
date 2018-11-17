@@ -17,8 +17,10 @@ const list = {
             cb(res);
         })
     },
-    end: function() {
-        orm.end();
+    deleteOne: function(itemName, cb) {
+        orm.deleteOne(itemName, res => {
+            cb(res);
+        })
     }
 }
 

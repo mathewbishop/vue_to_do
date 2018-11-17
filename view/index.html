@@ -44,7 +44,7 @@
                             <p>{{ item.list_item }}</p>
                         </span>
                         <span class="right">
-                            <i class="fas fa-trash fa-2x"></i>
+                            <i @click="empty(); deleteItem(item.list_item);" class="fas fa-trash fa-2x"></i>
                         </span>
                     </li>
                     
