@@ -19,7 +19,7 @@
             <h1>Vue To Do</h1>
             <form id="li-form">
                 <input id="li-input" class="input" type="text">
-                <button @click="empty(); addItem(); clearInput();" class="button is-primary is-large is-rounded">Add Item</button>
+                <button @click.prevent="addItem()" class="button is-primary is-large is-rounded">Add Item</button>
             </form>
             
         </header>
