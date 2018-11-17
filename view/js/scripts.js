@@ -30,6 +30,7 @@ const vm = new Vue({
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(newItem)
             })
+            .then(console.log(newItem))
         },
         markComplete: function(content) {
             fetch("/api/list/item-update", {
@@ -49,7 +50,7 @@ const vm = new Vue({
             .then(this.fetchComplete())
             .then(this.fetchNotComp())
         },
-        clearInput: function(formId) {
+        clearInput: function() {
             document.getElementById("li-form").reset();
         },
         empty: function() {

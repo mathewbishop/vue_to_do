@@ -9,13 +9,12 @@ router.post("/api/add-item", (req, res) => {
 // console.log(req.body.list_item);
     let newItem = req.body.list_item
     if (newItem === "") {
-        res.status(400).send("List item field cannot be empty.");
+        res.sendStatus(400);
     }
     else {
         list.insertOne(newItem, function(data) {
             console.log(data);
-            res.status(200);
-            res.end();
+            res.json(newItem)
         })
     }
     
