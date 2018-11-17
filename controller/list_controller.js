@@ -6,19 +6,18 @@ const list = require("../model/list");
 const router = express.Router();
 
 router.post("/api/add-item", (req, res) => {
-// console.log(req.body);
-//     let newItem = req.body;
-//         list.insertOne(newItem, function(data) {
-//             console.log(data);
-//         })
-//     res.end();
+console.log(req.body.list_item);
+    let newItem = req.body.list_item
+        list.insertOne(newItem, function(data) {
+            console.log(data);
+        })
+    res.end();
 });
 
 router.put("/api/list/item-update", (req, res) => {
     list.updateOne(1, req.body.list_item, function(data) {
         console.log(data);
     })
-    console.log(req.body);
     res.sendStatus(201);
 })
 

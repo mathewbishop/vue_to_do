@@ -17,15 +17,18 @@
 
         <header class="section">
             <h1>Vue To Do</h1>
-            <input class="input" type="text">
-            <button class="button is-primary is-large is-rounded" type="submit">Add Item</button>
+            <form id="li-form">
+                <input id="li-input" class="input" type="text">
+                <button @click="empty(); addItem(); clearInput();" class="button is-primary is-large is-rounded">Add Item</button>
+            </form>
+            
         </header>
 
         <main>
 
             <section class="not-complete">
                 <ul v-for="item in notComp">
-                    <li><i @click="markComplete(item)" class="fas fa-check-square"></i>{{ item.list_item }}</li>
+                    <li><i @click="empty(); markComplete(item)" class="fas fa-check-square"></i>{{ item.list_item }}</li>
                 </ul>
             </section>
             <!-- <section class="not-complete">            
@@ -38,7 +41,7 @@
                 <ul v-for="item in complete">
                     <li>
                         <span class="left">
-                            <p>{{ item }}</p>
+                            <p>{{ item.list_item }}</p>
                         </span>
                         <span class="right">
                             <i class="fas fa-trash fa-2x"></i>
