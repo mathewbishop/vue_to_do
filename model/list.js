@@ -2,8 +2,8 @@ const orm = require("../config/orm");
 
 
 const list = {
-    selectAll: function(bool, cb) {
-        orm.selectAll(bool, res => {
+    selectAll: function(cb) {
+        orm.selectAll(res => {
             cb(res)
         }); 
     },

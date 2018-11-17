@@ -5,52 +5,56 @@ const vm = new Vue({
         complete: []
     },
     methods: {
-        fetchNotComp: function() {
+        fetchItems: function() {
             let self = this
-            fetch("/api/list/not-complete")
+            fetch("/api/todolist")
             .then(res => res.json())
             .then(data => {
-                self.notComp = data
-            });
-        },
-        fetchComplete: function() {
-            let self = this;
-            fetch("/api/list/complete")
-            .then(res => res.json())
-            .then(data => {
-                self.complete = data
+                data.forEach(item => {
+                    if (item.completed === 0) {
+                        self.notComp.push(item);
+                    }
+                    if (item.completed === 1) {
+                        self.complete.push(item)
+                    }
+                })
             });
         },
         addItem: function() {
+            let self = this
             let newItem = {
                 list_item: document.getElementById("li-input").value
             }
-            fetch("/api/add-item", {
+            fetch("/api/todolist", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(newItem)
             })
+            .then(response => response.json())
+            .then(data => {
+                self.notComp = data;
+            })
+            document.getElementById("li-form").reset();
         },
-        markComplete: function(content) {
-            fetch("/api/list/item-update", {
+        markComplete: function(id) {
+            fetch("/api/todolist/:id", {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(content)
+                body: JSON.stringify(id)
             })
-            .then(this.fetchComplete())
-            .then(this.fetchNotComp())
+            .then(res => {
+                console.log(res)
+            })
         },
-        deleteItem: function(content) {
-            fetch(`/api/list/${content}`, {
+        deleteItem: function(id) {
+            fetch(`/api/todolist/${id}`, {
                 method: "DELETE",
                 headers: { "Content-Type": "text" },
-                body: content
+                body: id
             })
-            .then(this.fetchComplete())
-            .then(this.fetchNotComp())
-        },
-        clearInput: function(formId) {
-            document.getElementById("li-form").reset();
+            .then(res => {
+                console.log(res)
+            })
         },
         empty: function() {
             this.notComp = [];
@@ -60,5 +64,5 @@ const vm = new Vue({
 })
 
 // On page load, get initial list item data and state
-vm.fetchNotComp();
-vm.fetchComplete();
+vm.fetchItems();
+
