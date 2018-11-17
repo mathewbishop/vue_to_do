@@ -29,8 +29,12 @@ const orm = {
             cb(result);
         });
     },
-    end: function() {
-        connection.end();
+    deleteOne: function(itemName, cb) {
+        let queryString = "DELETE FROM items WHERE list_item = ?";
+        connection.query(queryString, [itemName], (err, result) => {
+            if (err) throw err;
+            cb(result);
+        })
     }
 }
 
