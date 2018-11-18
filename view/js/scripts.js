@@ -21,7 +21,6 @@ const vm = new Vue({
             });
         },
         addItem: function() {
-            let self = this
             let newItem = {
                 list_item: document.getElementById("li-input").value
             }
@@ -30,11 +29,10 @@ const vm = new Vue({
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(newItem)
             })
-            self.notComp.push(newItem)
+            this.notComp.push(newItem)
             document.getElementById("li-form").reset()
         },
         markComplete: function(id) {
-            let self = this
             fetch("/api/todolist/:id", {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },

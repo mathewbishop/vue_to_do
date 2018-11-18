@@ -11,27 +11,31 @@
 </head>
 <body>
     
+    <!-- CONTAINER BOUND TO VUE INSTANCE -->
     <div id="app" class="columns is-centered">
 
         <div class="column is-full container">
 
+        <!-- ADD ITEM INPUT -->
         <header class="section">
             <h1>Vue To Do</h1>
             <form id="li-form">
                 <input id="li-input" class="input" type="text">
                 <button @click.prevent="addItem()" class="button is-primary is-large is-rounded">Add Item</button>
             </form>
-            
         </header>
 
         <main>
-
+            <!-- TODO ITEMS (NOT COMPLETE) -->
             <section class="not-complete">
                 <ul v-for="item in notComp">
-                    <li><i @click="markComplete(item)" class="fas fa-check-square"></i>{{ item.list_item }}</li>
+                    <span class="left">
+                        <li><i @click="markComplete(item)" class="fas fa-check-square"></i>{{ item.list_item }}</li>
+                    </span>
                 </ul>
             </section>
-
+            
+            <!-- TODO ITEMS (COMPLETE) -->
             <section class="complete">
                 <ul v-for="item in complete">
                     <li>
