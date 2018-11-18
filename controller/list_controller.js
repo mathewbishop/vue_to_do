@@ -17,7 +17,6 @@ router.post("/api/todolist", (req, res) => {
     }
     else {
         list.insertOne(newItem, function(data) {
-            console.log(data);
             res.json(newItem)
         })
     }

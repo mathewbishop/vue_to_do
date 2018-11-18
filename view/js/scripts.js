@@ -30,11 +30,8 @@ const vm = new Vue({
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(newItem)
             })
-            .then(response => response.json())
-            .then(data => {
-                self.notComp.push(data);
-            })
-            document.getElementById("li-form").reset();
+            self.notComp.push(newItem)
+            document.getElementById("li-form").reset()
         },
         markComplete: function(id) {
             let self = this
@@ -43,10 +40,10 @@ const vm = new Vue({
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(id)
             })
-            .then(res => {
-                self.notComp.pop(id)
-                self.complete.push(id)
-            })
+            let index = this.notComp.indexOf(id)
+            this.notComp.splice(index, 1)
+            this.complete.push(id)
+            
         },
         deleteItem: function(id) {
             fetch(`/api/todolist/${id}`, {
@@ -57,6 +54,8 @@ const vm = new Vue({
             .then(res => {
                 console.log(res)
             })
+            let index = this.complete.indexOf(id)
+            this.complete.splice(index, 1)
         },
         empty: function() {
             this.notComp = [];
