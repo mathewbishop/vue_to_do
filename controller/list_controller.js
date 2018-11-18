@@ -26,7 +26,6 @@ router.post("/api/todolist", (req, res) => {
 // Put route for update list item status (complete/not-complete)
 router.put("/api/todolist/:id", (req, res) => {
     list.updateOne(1, req.body.list_item, function(data) {
-        console.log(data);
         res.json(data);
     })
     
@@ -36,7 +35,6 @@ router.put("/api/todolist/:id", (req, res) => {
 router.delete("/api/todolist/:id", (req, res) => {
     let item = req.params.id;
     list.deleteOne(item, function(data) {
-        console.log(data);
     })
     res.end()
 })

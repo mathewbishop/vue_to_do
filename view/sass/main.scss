@@ -36,7 +36,7 @@ main {
             max-width: 50rem;
             margin: 1rem auto;
             padding: .5rem;
-            i { font-size: $fontsize-1; margin-right: 1rem; }
+            i { font-size: $fontsize-1; margin-right: 1rem; cursor: pointer; }
         }
         
     }
@@ -54,7 +54,7 @@ main {
             max-width: 50rem;
             margin: 1rem auto;
             padding: .5rem;
-            i { font-size: $fontsize-1; margin-right: 1rem; }
+            i { font-size: $fontsize-1; margin-right: 1rem; cursor: pointer; }
             p { margin-left: 1rem; }
             
         }

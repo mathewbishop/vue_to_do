@@ -20,7 +20,8 @@ main .not-complete li {
   padding: .5rem; }
   main .not-complete li i {
     font-size: 1.688rem;
-    margin-right: 1rem; }
+    margin-right: 1rem;
+    cursor: pointer; }
 main .complete {
   margin: 2rem 0; }
   main .complete li {
@@ -37,7 +38,8 @@ main .complete {
     padding: .5rem; }
     main .complete li i {
       font-size: 1.688rem;
-      margin-right: 1rem; }
+      margin-right: 1rem;
+      cursor: pointer; }
     main .complete li p {
       margin-left: 1rem; }
 
