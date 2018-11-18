@@ -31,12 +31,6 @@
                     <li><i @click="markComplete(item)" class="fas fa-check-square"></i>{{ item.list_item }}</li>
                 </ul>
             </section>
-            <section class="not-complete">            
-                    <ul>
-                        <li><i class="fas fa-check-circle fa-2x"></i>Milk</li>
-                        <li><i class="fas fa-check-circle fa-2x"></i>Milk</li>
-                    </ul>
-            </section>
 
             <section class="complete">
                 <ul v-for="item in complete">
@@ -60,6 +54,7 @@
  
 
 <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.min.js"></script>
 <script src="./js/scripts.js"></script>
 </body>
 </html>
