@@ -2,7 +2,9 @@ const vm = new Vue({
     el: "#app",
     data: {
         notComp: [],
-        complete: []
+        complete: [],
+        lightTheme: "https://unpkg.com/bulmaswatch/flatly/bulmaswatch.min.css",
+        darkTheme: "https://unpkg.com/bulmaswatch/darkly/bulmaswatch.min.css"
     },
     methods: {
         // GET all list items
@@ -69,6 +71,14 @@ const vm = new Vue({
             let index = this.complete.indexOf(id)
             // Remove the item from the 'completed' array
             this.complete.splice(index, 1)
+        },
+        lightThemeToggle: function() {
+            let theme = document.getElementById("theme")
+            theme.href = this.lightTheme
+        },
+        darkThemeToggle: function() {
+            let theme = document.getElementById("theme")
+            theme.href = this.darkTheme
         }
     }
 })
