@@ -1,6 +1,7 @@
 //=============================================================
-// Modules
+// Dependencies
 //=============================================================
+require("dotenv").config();
 const express = require("express");
 const app = express();
 const routes = require("./controller/list_controller");
