@@ -1,6 +1,9 @@
 .columns {
   text-align: center; }
 
+.theme-toggles {
+  justify-content: center; }
+
 header h1 {
   font-size: 3.797rem;
   margin: 2rem 0; }

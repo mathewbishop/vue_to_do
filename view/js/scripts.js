@@ -2,7 +2,10 @@ const vm = new Vue({
     el: "#app",
     data: {
         notComp: [],
-        complete: []
+        complete: [],
+        lightTheme: "https://unpkg.com/bulmaswatch/flatly/bulmaswatch.min.css",
+        darkTheme: "https://unpkg.com/bulmaswatch/darkly/bulmaswatch.min.css",
+        isActive: false
     },
     methods: {
         // GET all list items
@@ -69,6 +72,24 @@ const vm = new Vue({
             let index = this.complete.indexOf(id)
             // Remove the item from the 'completed' array
             this.complete.splice(index, 1)
+        },
+        // Select light theme
+        lightThemeToggle: function() {
+            let theme = document.getElementById("theme")
+            theme.href = this.lightTheme
+            let lightBtn = document.getElementById("lightBtn");
+            lightBtn.classList.add("is-info");
+            let darkBtn = document.getElementById("darkBtn");
+            darkBtn.classList.remove("is-info");
+        },
+        // Select dark theme
+        darkThemeToggle: function() {
+            let theme = document.getElementById("theme")
+            theme.href = this.darkTheme
+            let darkBtn = document.getElementById("darkBtn");
+            darkBtn.classList.add("is-info");
+            let lightBtn = document.getElementById("lightBtn");
+            lightBtn.classList.remove("is-info");
         }
     }
 })
