@@ -14,7 +14,7 @@ This is a little single page app I built to continue working with and learning V
 
 **Changing the Theme |** When the app loads, the default light theme will be loaded. To switch to dark theme for your session, tap or click on the dark theme tab at the top of the page. 
 
-## Technologies Used
+## Tech Stack
 1. Node
 2. Express
 3. MySQL
